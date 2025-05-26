@@ -1,23 +1,64 @@
+# #----->FIRST STEPS
+
+# from fastapi import FastAPI
+
+# app = FastAPI()
+
+# # @something is decorator
+# @app.get("/")
+# # why async :-
+# async def root():
+#     return {"message": "Hello World"}
+
+
+# # after this run "fastapi dev main.py" on terminal 
+# # after opening local machine site add path /docs
+# #  to view interactive api docs[swaggerui]
+# # fastapi uses openapi schema to mask ur schema/routes uses json schema
+
+# # to view your schema -> json schema, add /openapi.json at end of path
+
+# # Operations:
+# # Post::Create /Get::Read /Put::Update /Delete:: Delete //Options/Head/Patch/trace
+
+
+
+#----->PATH PARAMETERS
+
 from fastapi import FastAPI
 
 app = FastAPI()
 
-# @something is decorator
-@app.get("/")
-# why async :-
-async def root():
-    return {"message": "Hello World"}
+# parameterized paths
+@app.get("/items/{item_id}")
+async def read_item(item_id):
+    return {"item_id": item_id}
+
+# type parameterized paths
+# benificial for editor level error hadnling
+@app.get("/items1/{item1_id}")
+async def read_item1(item1_id: int):
+    return {"item_id": item1_id}
 
 
-# after this run "fastapi dev main.py" on terminal 
-# after opening local machine site add path /docs
-#  to view interactive api docs[swaggerui]
-# fastapi uses openapi schema to mask ur schema/routes uses json schema
 
-# to view your schema -> json schema, add /openapi.json at end of path
 
-# Operations:
-# Post::Create /Get::Read /Put::Update /Delete:: Delete //Options/Head/Patch/trace
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
