@@ -58,7 +58,23 @@ async def read_users():
 async def read_users2():
     return ["M","Ibrahim"]
 
-# Enum
+# Enum - bounds to select from limited choice at run time
+from enum import Enum
+class ModelName(str,Enum):
+    alexnet = "alexnet"
+    resnet = "resnet"
+    lenet = "lenet"
+
+@app.get("/models/{model_name}")
+async def get_models(model_name: ModelName):
+    #method 1 to verify
+    if model_name is ModelName.alexnet:
+        return {"model_name":model_name , "message": "DL FTW"}
+    #method 2 to verify
+    if model_name.value == "lenet":
+        return {"model_name":model_name,"message":"leCNN"}
+    
+    return {"model_name":model_name,"message": "have some residuals"}
 
 
 
