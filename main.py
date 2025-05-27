@@ -35,13 +35,30 @@ async def read_item(item_id):
     return {"item_id": item_id}
 
 # type parameterized paths
-# benificial for editor level error hadnling
+# benificial for editor level error handling(uses pydantic for data validation)
 @app.get("/items1/{item1_id}")
 async def read_item1(item1_id: int):
     return {"item_id": item1_id}
 
+# order matters - u will understand later, for now just remember
+@app.get("/users/me")
+async def read_user_me():
+    return {"user_id": "Current User"}
 
+@app.get("/users/{user_id}")
+async def read_user(user_id:str):
+    return {"user_id":user_id}
 
+#   always uses first matched path, doesnt duplicated
+@app.get("/users")
+async def read_users():
+    return ["Saffi","Sardar"]
+
+@app.get("/users")
+async def read_users2():
+    return ["M","Ibrahim"]
+
+# Enum
 
 
 
