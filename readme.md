@@ -1,18 +1,19 @@
 Day 1:
 
-First Steps, Path Parameters, Query Parameters
+First Steps, Path Parameters, Query Parameters (PENDING)
 
 Day 2:
 
-Request Body, Query Parameters and String Validations
+Request Body, Query Parameters and String Validations (PENDING)
 
 Day 3:
 
-Path Parameters and Numeric Validations, Query Parameter Models, Body - Multiple Parameters
+Path Parameters and Numeric Validations, Query Parameter Models, Body - Multiple Parameters (PENDING)
 
 Day 4:
 
-Body - Fields, Body - Nested Models, Declare Request Example Data
+Body - Fields, Body - Nested Models,
+Declare Request Example Data (PENDING)
 
 Day 5:
 
