@@ -84,7 +84,7 @@
 
 #----->Query PARAMETERS
 
-# intro - mainly for searching/filtering/etc
+# intro - mainly for searching/filtering/etc - dena he to dedo werna na do
 from fastapi import FastAPI
 
 app = FastAPI()
@@ -98,8 +98,11 @@ async def read_item(skip:int=0,limit:int=10):
 
 # optional parameters - using none
 
-
-
+@app.get("/items/{item_id}")
+async def read_item(item_id:str,q:str | None = None):
+    if q:
+        return {"item_id":item_id,"q" : q}
+    return {"item_id":item_id}
 
 
 
