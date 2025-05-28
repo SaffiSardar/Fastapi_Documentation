@@ -104,6 +104,11 @@ async def read_item(item_id:str,q:str | None = None):
         return {"item_id":item_id,"q" : q}
     return {"item_id":item_id}
 
+# Query parameter type conversion
+
+# @app.get("/items1/{item1_id}")
+# async def read_item1(item1_id: str, q:str | None=None, short:bool = False):
+
 
 
 
