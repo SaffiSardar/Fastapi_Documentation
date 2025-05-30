@@ -98,18 +98,24 @@ async def read_item(skip:int=0,limit:int=10):
 
 # optional parameters - using none
 
-@app.get("/items/{item_id}")
-async def read_item(item_id:str,q:str | None = None):
-    if q:
-        return {"item_id":item_id,"q" : q}
-    return {"item_id":item_id}
+# @app.get("/items/{item_id}")
+# async def read_item(item_id:str,q:str | None = None):
+#     if q:
+#         return {"item_id":item_id,"q" : q}
+#     return {"item_id":item_id}
 
 # Query parameter type conversion
 
-# @app.get("/items1/{item1_id}")
-# async def read_item1(item1_id: str, q:str | None=None, short:bool = False):
-
-
+@app.get("/items/{item_id}")
+async def read_item(item_id: str, q: str | None = None, short: bool = False):
+    item = {"item_id": item_id}
+    if q:
+        item.update({"q": q})
+    if not short:
+        item.update(
+            {"description": "This is an amazing item that has a long description"}
+        )
+    return item
 
 
 
