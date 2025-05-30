@@ -17,7 +17,7 @@ Declare Request Example Data (PENDING)
 
 Day 5:
 
-Extra Data Types, Cookie Parameters, Header Parameters
+Extra Data Types, Cookie Parameters, Header Parameters (PENDING)
 
 Day 6:
 
