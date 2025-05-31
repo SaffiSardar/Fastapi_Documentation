@@ -21,11 +21,11 @@ Extra Data Types, Cookie Parameters, Header Parameters (PENDING)
 
 Day 6:
 
-Cookie Parameter Models, Header Parameter Models, Response Model - Return Type
+Cookie Parameter Models, Header Parameter Models, Response Model - Return Type (PENDING)
 
 Day 7:
 
-Extra Models, Response Status Code, Form Data, Form Models
+Extra Models, Response Status Code, Form Data, Form Models (PENDING)
 
 Day 8:
 
